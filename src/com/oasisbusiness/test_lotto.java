@@ -9,7 +9,6 @@ class test_lotto {
 	@Test
 	void test() {
 		System.out.println("hello world");
-		
 	}
 
 }
