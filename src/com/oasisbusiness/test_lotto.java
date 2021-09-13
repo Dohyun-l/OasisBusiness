@@ -8,7 +8,6 @@ class test_lotto {
 
 	@Test
 	void test() {
-//		fail("Not yet implemented");
 		System.out.println("hello world");
 		
 	}
