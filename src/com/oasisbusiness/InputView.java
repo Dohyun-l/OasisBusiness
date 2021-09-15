@@ -1,6 +1,7 @@
 package com.oasisbusiness;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -27,21 +28,23 @@ public class InputView {
 
 		winningNumStr = winningNumStr.replaceAll("[^0-9]", ",");
 
-		System.out.println(winningNumStr);
-
 		for (int i = 0; i < winningNumStr.split(",").length; i++) {
-			if (winningNumStr.split(",")[i] == "") {
-
-			} else {
-				winningNum.add(Integer.parseInt(winningNumStr.split(",")[i]));
-			}
+			winningNum.add(strCheck(winningNumStr.split(",")[i]));
 		}
-
+		
+		winningNum.removeIf(n -> (n == 0));
+		
+		Collections.sort(winningNum);
+		
 		return winningNum;
 	}
 
-	public boolean strCheck(Object s) {
+	public int strCheck(String s) {
 
-		return true;
+		if(s == "") {
+			return 0;
+		}
+		
+		return Integer.parseInt(s);
 	}
 }
