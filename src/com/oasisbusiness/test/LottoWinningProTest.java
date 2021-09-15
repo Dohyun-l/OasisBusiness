@@ -49,5 +49,4 @@ class LottoWinningProTest {
 		assertEquals(answer, lotto.numOfWinningGame(myLotto, WinningNum));
 	}
 
-
 }

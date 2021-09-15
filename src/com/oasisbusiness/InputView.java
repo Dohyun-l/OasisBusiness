@@ -7,23 +7,23 @@ import java.util.Scanner;
 
 public class InputView {
 
-	public final String inputMoneyTxt = "구입금액을 입력해 주세요.";
-	public final String buyLottoTxt = "%d개를 구매했습니다.\n";
-	public final String winningNumTxt = "지난 주 당첨 번호를 입력해 주세요.";
+	public final String INPUT_MONEY_TXT = "구입금액을 입력해 주세요.";
+	public final String BUY_LOTTO_TXT = "%d개를 구매했습니다.\n";
+	public final String WINNING_NUM_TXT = "지난 주 당첨 번호를 입력해 주세요.";
 
 	Scanner scan = new Scanner(System.in);
 
 	public int buyLotto() {
-		System.out.println(inputMoneyTxt);
+		System.out.println(INPUT_MONEY_TXT);
 		int numOfLotto = scan.nextInt() / 1000;
-		System.out.printf(buyLottoTxt, numOfLotto);
+		System.out.printf(BUY_LOTTO_TXT, numOfLotto);
 		return numOfLotto;
 	}
 
 	public List<Integer> inputWinningNum() {
 		List<Integer> winningNum = new ArrayList<Integer>();
 		String winningNumStr = "";
-		System.out.println(winningNumTxt);
+		System.out.println(WINNING_NUM_TXT);
 		winningNumStr = scan.nextLine();
 
 		winningNumStr = winningNumStr.replaceAll("[^0-9]", ",");

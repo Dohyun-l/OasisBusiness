@@ -14,7 +14,7 @@ class InputViewTest {
 		iv = new InputView();
 	}
 
-//	@Test
+	@Test
 	void testBuyLotto() {
 		iv.buyLotto();
 	}
