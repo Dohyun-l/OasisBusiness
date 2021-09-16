@@ -47,20 +47,4 @@ class LottoCreateNumProTest {
 		assertEquals(5, lnp.buyLotto(5).size());
 	}
 	
-	@Test
-	void new_create_lotto_overlap_return_true() {
-		List<List<Integer>> lottoList 
-			= new ArrayList<List<Integer>>(Arrays.asList(Arrays.asList(1, 2, 3, 4, 5, 6),Arrays.asList(1, 2, 3, 4, 5, 7)));
-		List<Integer> newLotto = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6));  
-		assertTrue(lnp.overlap(lottoList, newLotto));
-	}
-	
-	@Test
-	void new_create_lotto_unoverlap_return_false() {
-		List<List<Integer>> lottoList 
-			= new ArrayList<List<Integer>>(Arrays.asList(Arrays.asList(1, 2, 3, 4, 5, 6),Arrays.asList(1, 2, 3, 4, 5, 7)));
-		List<Integer> newLotto = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 8));  
-		assertFalse(lnp.overlap(lottoList, newLotto));
-	}
-	
 }

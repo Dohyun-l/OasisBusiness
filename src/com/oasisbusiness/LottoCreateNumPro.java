@@ -45,12 +45,5 @@ public class LottoCreateNumPro {
 		
 		return lottoList;
 	}
-
-	public boolean overlap(List<List<Integer>> lottoList, List<Integer> newLotto) {
-		
-		if(lottoList.contains(newLotto)) return true;
-		
-		return false;
-	}
 	
 }
